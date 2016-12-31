@@ -72,7 +72,8 @@ public class LeanGridViewGroup extends ViewGroup {
             String title = element.getTitle();
             paint.setTextSize(h/8);
             if(title!=null) {
-                canvas.drawText(title,w/30,7*h/8,paint);
+                float textWidth = paint.measureText(title);
+                canvas.drawText(title,w/2-textWidth/2,7*h/8,paint);
             }
         }
 
