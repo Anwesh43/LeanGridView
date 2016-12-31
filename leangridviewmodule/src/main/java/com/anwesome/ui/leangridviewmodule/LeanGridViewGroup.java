@@ -59,6 +59,7 @@ public class LeanGridViewGroup extends ViewGroup {
         public LeanView(Context context,GridViewElement gridViewElement) {
             super(context);
             this.element = gridViewElement;
+            this.setOnClickListener(element.getOnClickListener());
         }
         public void onDraw(Canvas canvas) {
             Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);

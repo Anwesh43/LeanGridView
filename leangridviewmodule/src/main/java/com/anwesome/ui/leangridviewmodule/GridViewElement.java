@@ -10,11 +10,17 @@ import android.view.View;
 public class GridViewElement {
     private Bitmap bitmap;
     private String title;
+    private View.OnClickListener onClickListener;
     public GridViewElement(Bitmap bitmap,String title){
         this.bitmap = bitmap;
         this.title = title;
     }
-
+    public void setOnClickListener(View.OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
+    public View.OnClickListener getOnClickListener() {
+        return onClickListener;
+    }
     public Bitmap getBitmap() {
         return bitmap;
     }
